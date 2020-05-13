@@ -1,16 +1,26 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
-group 'Git A3'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
+sourceCompatibility = 1.11
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile 'org.mockito:mockito-core:2.+'
+    testCompile group: 'org.powermock', name: 'powermock-module-junit4', version: '2.0.0'
+    testCompile group: 'org.powermock', name: 'powermock-api-mockito2', version: '2.0.0'
 }
+
+//run{
+//    standardInput = System.in
+//}
+
+mainClassName = "au.edu.sydney.cpa.erp.view.CLI"
