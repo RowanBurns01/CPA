@@ -2,9 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33f978d0-7b02-4a34-b95b-ab98ef110069" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/Importance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/ImportanceCritical.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/ImportanceNormal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/Timing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/TimingOnce.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/TimingScheduled.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/Type.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/TypeAudit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/TypeRegular.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ClientImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ClientImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/FEAAFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/FEAAFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/CriticalAuditOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/CriticalAuditOrderScheduled.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/FirstOrderType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/FirstOrderTypeScheduled.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/NewOrderImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/NewOrderImplScheduled.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/Order66.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/Order66Scheduled.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/au.edu.sydney.cpa.erp.feaa.AllowedScopeTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/au.edu.sydney.cpa.erp.feaa.AllowedScopeTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/au.edu.sydney.cpa.erp.feaa.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/au.edu.sydney.cpa.erp.feaa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-au.edu.sydney.cpa.erp.feaa.AllowedScopeTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-au.edu.sydney.cpa.erp.feaa.AllowedScopeTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/database/TestDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/database/TestDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/FEAAFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/FEAAFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/CriticalAuditOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/ConcreteOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/CriticalAuditOrderScheduled.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/FirstOrderType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/FirstOrderTypeScheduled.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/NewOrderImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/NewOrderImplScheduled.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/Order66.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/Order66Scheduled.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,12 +61,35 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1bsG77Frj1KxXq6AxHLJu0LZmaj" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
@@ -99,7 +166,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1589413217948</updated>
-      <workItem from="1589413222761" duration="1214000" />
+      <workItem from="1589413222761" duration="27297000" />
     </task>
     <servers />
   </component>

@@ -4,28 +4,40 @@ import au.edu.sydney.cpa.erp.ordering.Order;
 import au.edu.sydney.cpa.erp.ordering.Report;
 
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
-/**
- * Note from Tim: this is a critical order for audit accounting work.
- * Critical work costs extra.
- * Audits go into detail and so charge for all employees
- */
-@SuppressWarnings("Duplicates")
-public class CriticalAuditOrder implements Order {
+public class ConcreteOrder implements Order {
+
+    private final Timing schedule;
+    private final Importance importance;
+    private final Type type;
     private Map<Report, Integer> reports = new HashMap<>();
     private final int id;
     private LocalDateTime date;
     private int client;
-    private double criticalLoading;
     private boolean finalised = false;
 
-    public CriticalAuditOrder(int id, int client, LocalDateTime date, double criticalLoading) {
+    public ConcreteOrder(Timing schedule, Importance importance, Type type, int id, int client, LocalDateTime date, double criticalLoading, int numQuarters, int maxCountedEmployees){
+        this.schedule = schedule;
+        this.importance = importance;
+        this.type = type;
+
+        setNumberOfQuarters(numQuarters);
+        setCriticalLoading(criticalLoading);
+        setMaxCountedEmployees(maxCountedEmployees);
+
         this.id = id;
         this.client = client;
         this.date = date;
-        this.criticalLoading = criticalLoading;
+    }
+
+
+    @Override
+    public int getOrderID() {
+        return id;
     }
 
     @Override
@@ -42,7 +54,7 @@ public class CriticalAuditOrder implements Order {
 
         for (Report contained: reports.keySet()) {
             if (contained.getCommission() == report.getCommission() &&
-                contained.getReportName().equals(report.getReportName()) &&
+                    contained.getReportName().equals(report.getReportName()) &&
                     Arrays.equals(contained.getLegalData(), report.getLegalData()) &&
                     Arrays.equals(contained.getCashFlowData(), report.getCashFlowData()) &&
                     Arrays.equals(contained.getMergesData(), report.getMergesData()) &&
@@ -88,17 +100,12 @@ public class CriticalAuditOrder implements Order {
     }
 
     @Override
-    public void finalise() {
-        this.finalised = true;
-    }
-
-    protected double getCriticalLoading() {
-        return this.criticalLoading;
-    }
+    public void finalise() { this.finalised = true; }
 
     @Override
     public Order copy() {
-        Order copy = new CriticalAuditOrder(id, client, date, criticalLoading);
+
+        Order copy = new ConcreteOrder(schedule,  importance,  type,id, client, date, getCriticalLoading(), getNumberOfQuarters(), getMaxCountedEmployees());
         for (Report report : reports.keySet()) {
             copy.setReport(report, reports.get(report));
         }
@@ -106,72 +113,46 @@ public class CriticalAuditOrder implements Order {
         return copy;
     }
 
-    @Override
-    public String shortDesc() {
-        return String.format("ID:%s $%,.2f", id, getTotalCommission());
-    }
-
-    @Override
-    public String longDesc() {
-        double baseCommission = 0.0;
-        double loadedCommission = getTotalCommission();
-        StringBuilder reportSB = new StringBuilder();
-
-        List<Report> keyList = new ArrayList<>(reports.keySet());
-        keyList.sort(Comparator.comparing(Report::getReportName).thenComparing(Report::getCommission));
-
-        for (Report report : keyList) {
-            double subtotal = report.getCommission() * reports.get(report);
-            baseCommission += subtotal;
-
-            reportSB.append(String.format("\tReport name: %s\tEmployee Count: %d\tCommission per employee: $%,.2f\tSubtotal: $%,.2f\n",
-                    report.getReportName(),
-                    reports.get(report),
-                    report.getCommission(),
-                    subtotal));
-        }
-
-        return String.format(finalised ? "" : "*NOT FINALISED*\n" +
-                        "Order details (id #%d)\n" +
-                        "Date: %s\n" +
-                        "Reports:\n" +
-                        "%s" +
-                        "Critical Loading: $%,.2f\n" +
-                        "Total cost: $%,.2f\n",
-                id,
-                date.format(DateTimeFormatter.ISO_LOCAL_DATE),
-                reportSB.toString(),
-                loadedCommission - baseCommission,
-                loadedCommission
-                );
-    }
-
-    @Override
-    public String generateInvoiceData() {
-        return String.format("Your priority business account has been charged: $%,.2f" +
-                "\nPlease see your internal accounting department for itemised details.", getTotalCommission());
-    }
-
-    @Override
-    public double getTotalCommission() {
-        double cost = 0.0;
-        for (Report report : reports.keySet()) {
-            cost += reports.get(report) * report.getCommission();
-        }
-        cost += cost * criticalLoading;
-        return cost;
+    protected boolean isFinalised() {
+        return finalised;
     }
 
     protected Map<Report, Integer> getReports() {
         return reports;
     }
 
+    // Schedule Specific
     @Override
-    public int getOrderID() {
-        return id;
+    public String generateInvoiceData() {
+        return schedule.generateInvoiceData(getCriticalLoading(),reports, getMaxCountedEmployees());
     }
 
-    protected boolean isFinalised() {
-        return finalised;
+    @Override
+    public String shortDesc() { return schedule.shortDesc(id,getCriticalLoading(),reports,getMaxCountedEmployees()); }
+
+    @Override
+    public String longDesc() { return schedule.longDesc(id,finalised, date, getCriticalLoading(), reports,getMaxCountedEmployees()); }
+
+    @Override
+    public double getTotalCommission() {
+        return schedule.getTotalCommission(getCriticalLoading(),reports, getMaxCountedEmployees());
     }
+
+    public double getRecurringCost() { return schedule.getRecurringCost(getCriticalLoading(),reports, getMaxCountedEmployees()); }
+
+    public int getNumberOfQuarters() { return schedule.getNumberOfQuarters(); }
+
+    public void setNumberOfQuarters(int numberOfQuarters) { schedule.setNumQuarters(numberOfQuarters); }
+
+    // Importance Specific
+    protected double getCriticalLoading() { return importance.getCriticalLoading(); }
+
+    public void setCriticalLoading(double criticalLoading) { importance.setCriticalLoading(criticalLoading); }
+
+    // Type Specific
+    protected int getMaxCountedEmployees() {
+        return type.getMaxCountedEmployees();
+    }
+
+    public void setMaxCountedEmployees(int maxCountedEmployees) { type.setMaxCounterEmployees(maxCountedEmployees);}
 }

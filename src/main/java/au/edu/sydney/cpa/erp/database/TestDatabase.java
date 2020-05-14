@@ -43,8 +43,8 @@ public class TestDatabase {
             }
         }
 
-
-        simulateSlowDatabase(10, "Saving order");
+        // Set back to 10
+        simulateSlowDatabase(3, "Saving order");
 
         orders.add(order.copy());
     }

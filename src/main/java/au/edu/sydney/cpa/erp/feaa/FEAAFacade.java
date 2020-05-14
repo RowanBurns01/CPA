@@ -59,29 +59,37 @@ public class FEAAFacade {
         if (isScheduled) {
             if (1 == orderType) { // 1 is regular accounting
                 if (isCritical) {
-                    order = new FirstOrderTypeScheduled(id, clientID, date, criticalLoading, maxCountedEmployees, numQuarters);
+//                    order = new FirstOrderTypeScheduled(id, clientID, date, criticalLoading, maxCountedEmployees, numQuarters);
+                    order = new ConcreteOrder(new TimingScheduled(), new ImportanceCritical(), new TypeRegular(), id, clientID, date, criticalLoading, numQuarters, maxCountedEmployees);
                 } else {
-                    order = new Order66Scheduled(id, clientID, date, maxCountedEmployees, numQuarters);
+//                    order = new Order66Scheduled(id, clientID, date, maxCountedEmployees, numQuarters);
+                    order = new ConcreteOrder(new TimingScheduled(), new ImportanceNormal(), new TypeRegular(), id, clientID, date, -1, numQuarters, maxCountedEmployees);
                 }
             } else if (2 == orderType) { // 2 is audit
                     if (isCritical) {
-                        order = new CriticalAuditOrderScheduled(id, clientID, date, criticalLoading, numQuarters);
+//                        order = new CriticalAuditOrderScheduled(id, clientID, date, criticalLoading, numQuarters);
+                        order = new ConcreteOrder(new TimingScheduled(), new ImportanceCritical(), new TypeAudit(), id, clientID, date, criticalLoading, numQuarters, -1);
                     } else {
-                        order = new NewOrderImplScheduled(id, clientID, date, numQuarters);
+//                        order = new NewOrderImplScheduled(id, clientID, date, numQuarters);
+                        order = new ConcreteOrder(new TimingScheduled(), new ImportanceNormal(), new TypeAudit(), id, clientID, date, -1, numQuarters, -1);
                     }
             } else {return null;}
         } else {
             if (1 == orderType) {
                 if (isCritical) {
-                    order = new FirstOrderType(id, clientID, date, criticalLoading, maxCountedEmployees);
+//                    order = new FirstOrderType(id, clientID, date, criticalLoading, maxCountedEmployees);
+                    order = new ConcreteOrder(new TimingOnce(), new ImportanceCritical(), new TypeRegular(), id, clientID, date, criticalLoading, -1, maxCountedEmployees);
                 } else {
-                    order = new Order66(id, clientID, date, maxCountedEmployees);
+//                    order = new Order66(id, clientID, date, maxCountedEmployees);
+                    order = new ConcreteOrder(new TimingOnce(), new ImportanceNormal(), new TypeRegular(), id, clientID, date, -1, -1, maxCountedEmployees);
                 }
             } else if (2 == orderType) {
                 if (isCritical) {
-                    order = new CriticalAuditOrder(id, clientID, date, criticalLoading);
+//                    order = new CriticalAuditOrder(id, clientID, date, criticalLoading);
+                    order = new ConcreteOrder(new TimingOnce(), new ImportanceCritical(), new TypeAudit(), id, clientID, date, criticalLoading, -1, -1);
                 } else {
-                    order = new NewOrderImpl(id, clientID, date);
+//                    order = new NewOrderImpl(id, clientID, date);
+                    order = new ConcreteOrder(new TimingOnce(), new ImportanceNormal(), new TypeAudit(), id, clientID, date, -1, -1, -1);
                 }
             } else {return null;}
         }

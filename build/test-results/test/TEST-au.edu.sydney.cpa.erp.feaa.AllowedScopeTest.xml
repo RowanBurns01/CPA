@@ -1,28 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" tests="22" skipped="0" failures="0" errors="0" timestamp="2020-05-14T00:01:06" hostname="DESKTOP-FLQN2VT" time="3.75">
+<testsuite name="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" tests="22" skipped="0" failures="0" errors="0" timestamp="2020-05-14T08:29:09" hostname="DESKTOP-FLQN2VT" time="4.311">
   <properties/>
-  <testcase name="createOrder" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="2.142"/>
-  <testcase name="getAllClientIDs" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.034"/>
-  <testcase name="getAllReports" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="1.181"/>
-  <testcase name="orderLineSet" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.038"/>
-  <testcase name="getAllOrders" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.007"/>
-  <testcase name="getOrderLongDesc" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.008"/>
-  <testcase name="finaliseOrder" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.067"/>
-  <testcase name="getOrderShortDesc" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.008"/>
-  <testcase name="login" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.006"/>
-  <testcase name="logout" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.005"/>
-  <testcase name="getOrderTotalCost" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.009"/>
-  <testcase name="getClient" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.011"/>
-  <testcase name="removeOrder" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.01"/>
-  <testcase name="getKnownContactMethods" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.005"/>
-  <testcase name="testOrderCriticalAuditSched" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.041"/>
-  <testcase name="testOrderCriticalRegular" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.018"/>
-  <testcase name="testOrderStandardAuditSched" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.022"/>
-  <testcase name="testOrderStandardAudit" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.016"/>
-  <testcase name="testOrderStandardRegular" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.019"/>
-  <testcase name="testOrderCriticalAudit" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.015"/>
-  <testcase name="testOrderCriticalRegularSched" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.033"/>
-  <testcase name="testOrderStandardRegularSched" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.036"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="testOrderCriticalAuditSched" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="2.58"/>
+  <testcase name="testOrderCriticalRegularSched" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.036"/>
+  <testcase name="testOrderStandardRegular" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.039"/>
+  <testcase name="testOrderStandardRegularSched" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.019"/>
+  <testcase name="getKnownContactMethods" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.014"/>
+  <testcase name="testOrderStandardAuditSched" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.02"/>
+  <testcase name="testOrderCriticalRegular" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.015"/>
+  <testcase name="testOrderCriticalAudit" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.028"/>
+  <testcase name="testOrderStandardAudit" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.018"/>
+  <testcase name="getOrderShortDesc" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.076"/>
+  <testcase name="getAllOrders" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.016"/>
+  <testcase name="getAllClientIDs" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.007"/>
+  <testcase name="orderLineSet" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.007"/>
+  <testcase name="login" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.014"/>
+  <testcase name="removeOrder" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.014"/>
+  <testcase name="createOrder" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.013"/>
+  <testcase name="logout" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.008"/>
+  <testcase name="getAllReports" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="1.276"/>
+  <testcase name="getClient" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.016"/>
+  <testcase name="getOrderTotalCost" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.006"/>
+  <testcase name="getOrderLongDesc" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.005"/>
+  <testcase name="finaliseOrder" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.057"/>
+  <system-out><![CDATA[*NOT FINALISED*
+Order details (id #0)
+Date: 2020-05-14
+Number of quarters: 10
+Reports:
+	Report name: Fake Product	Employee Count: 10	Commission per employee: $100.00	Subtotal: $1,000.00
+	Report name: Fake Report 2	Employee Count: 1	Commission per employee: $300.00	Subtotal: $300.00
+Critical Loading: $1,300.00
+Recurring cost: $1,430.00
+Total cost: $14,300.00
+
+*NOT FINALISED*
+Order details (id #0)
+Date: 2020-05-14
+Reports:
+	Report name: Fake Product	Employee Count: 10	Commission per employee: $100.00	Subtotal: $1,000.00
+	Report name: Fake Report 2	Employee Count: 1	Commission per employee: $300.00	Subtotal: $300.00
+Total cost: $1,300.00
+
+*NOT FINALISED*
+Order details (id #0)
+Date: 2020-05-14
+Number of quarters: 10
+Reports:
+	Report name: Fake Product	Employee Count: 10	Commission per employee: $100.00	Subtotal: $1,000.00
+	Report name: Fake Report 2	Employee Count: 1	Commission per employee: $300.00	Subtotal: $300.00
+Recurring cost: $1,300.00
+Total cost: $13,000.00
+
+*NOT FINALISED*
+Order details (id #0)
+Date: 2020-05-14
+Number of quarters: 10
+Reports:
+	Report name: Fake Product	Employee Count: 10	Commission per employee: $100.00	Subtotal: $1,000.00
+	Report name: Fake Report 2	Employee Count: 1	Commission per employee: $300.00	Subtotal: $300.00
+Recurring cost: $1,300.00
+Total cost: $13,000.00
+
+*NOT FINALISED*
+Order details (id #0)
+Date: 2020-05-14
+Reports:
+	Report name: Fake Product	Employee Count: 10	Commission per employee: $100.00	Subtotal: $1,000.00
+	Report name: Fake Report 2	Employee Count: 1	Commission per employee: $300.00	Subtotal: $300.00
+Critical Loading: $130.00
+Total cost: $1,430.00
+
+*NOT FINALISED*
+Order details (id #0)
+Date: 2020-05-14
+Reports:
+	Report name: Fake Product	Employee Count: 30	Commission per employee: $100.00	Subtotal: $3,000.00
+	Report name: Fake Report 2	Employee Count: 1	Commission per employee: $300.00	Subtotal: $300.00
+Critical Loading: $330.00
+Total cost: $3,630.00
+
+*NOT FINALISED*
+Order details (id #0)
+Date: 2020-05-14
+Reports:
+	Report name: Fake Product	Employee Count: 10	Commission per employee: $100.00	Subtotal: $1,000.00
+	Report name: Fake Report 2	Employee Count: 1	Commission per employee: $300.00	Subtotal: $300.00
+Total cost: $1,300.00
+
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
