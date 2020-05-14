@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">4.284s</div>
+<div class="counter">4.774s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,62 +79,62 @@
 </thead>
 <tr>
 <td class="success">createOrder</td>
-<td class="success">0.013s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">finaliseOrder</td>
-<td class="success">0.057s</td>
+<td class="success">0.102s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getAllClientIDs</td>
-<td class="success">0.007s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getAllOrders</td>
-<td class="success">0.016s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getAllReports</td>
-<td class="success">1.276s</td>
+<td class="success">1.525s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getClient</td>
-<td class="success">0.016s</td>
+<td class="success">0.029s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getKnownContactMethods</td>
-<td class="success">0.014s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getOrderLongDesc</td>
-<td class="success">0.005s</td>
+<td class="success">0.011s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getOrderShortDesc</td>
-<td class="success">0.076s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">getOrderTotalCost</td>
 <td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">getOrderTotalCost</td>
+<td class="success">0.058s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">login</td>
-<td class="success">0.014s</td>
+<td class="success">0.012s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">logout</td>
-<td class="success">0.008s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -144,47 +144,47 @@
 </tr>
 <tr>
 <td class="success">removeOrder</td>
-<td class="success">0.014s</td>
+<td class="success">0.021s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testOrderCriticalAudit</td>
-<td class="success">0.028s</td>
+<td class="success">2.785s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testOrderCriticalAuditSched</td>
-<td class="success">2.580s</td>
+<td class="success">0.026s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testOrderCriticalRegular</td>
-<td class="success">0.015s</td>
+<td class="success">0.042s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testOrderCriticalRegularSched</td>
-<td class="success">0.036s</td>
+<td class="success">0.029s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testOrderStandardAudit</td>
-<td class="success">0.018s</td>
+<td class="success">0.031s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testOrderStandardAuditSched</td>
-<td class="success">0.020s</td>
+<td class="success">0.019s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testOrderStandardRegular</td>
-<td class="success">0.039s</td>
+<td class="success">0.015s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testOrderStandardRegularSched</td>
-<td class="success">0.019s</td>
+<td class="success">0.017s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -194,7 +194,25 @@
 <span class="code">
 <pre>*NOT FINALISED*
 Order details (id #0)
-Date: 2020-05-14
+Date: 2020-05-15
+Reports:
+	Report name: Fake Product	Employee Count: 30	Commission per employee: $100.00	Subtotal: $3,000.00
+	Report name: Fake Report 2	Employee Count: 1	Commission per employee: $300.00	Subtotal: $300.00
+Critical Loading: $330.00
+Total cost: $3,630.00
+
+*NOT FINALISED*
+Order details (id #0)
+Date: 2020-05-15
+Reports:
+	Report name: Fake Product	Employee Count: 10	Commission per employee: $100.00	Subtotal: $1,000.00
+	Report name: Fake Report 2	Employee Count: 1	Commission per employee: $300.00	Subtotal: $300.00
+Critical Loading: $130.00
+Total cost: $1,430.00
+
+*NOT FINALISED*
+Order details (id #0)
+Date: 2020-05-15
 Number of quarters: 10
 Reports:
 	Report name: Fake Product	Employee Count: 10	Commission per employee: $100.00	Subtotal: $1,000.00
@@ -205,7 +223,7 @@ Total cost: $14,300.00
 
 *NOT FINALISED*
 Order details (id #0)
-Date: 2020-05-14
+Date: 2020-05-15
 Reports:
 	Report name: Fake Product	Employee Count: 10	Commission per employee: $100.00	Subtotal: $1,000.00
 	Report name: Fake Report 2	Employee Count: 1	Commission per employee: $300.00	Subtotal: $300.00
@@ -213,7 +231,7 @@ Total cost: $1,300.00
 
 *NOT FINALISED*
 Order details (id #0)
-Date: 2020-05-14
+Date: 2020-05-15
 Number of quarters: 10
 Reports:
 	Report name: Fake Product	Employee Count: 10	Commission per employee: $100.00	Subtotal: $1,000.00
@@ -223,39 +241,21 @@ Total cost: $13,000.00
 
 *NOT FINALISED*
 Order details (id #0)
-Date: 2020-05-14
+Date: 2020-05-15
+Reports:
+	Report name: Fake Product	Employee Count: 10	Commission per employee: $100.00	Subtotal: $1,000.00
+	Report name: Fake Report 2	Employee Count: 1	Commission per employee: $300.00	Subtotal: $300.00
+Total cost: $1,300.00
+
+*NOT FINALISED*
+Order details (id #0)
+Date: 2020-05-15
 Number of quarters: 10
 Reports:
 	Report name: Fake Product	Employee Count: 10	Commission per employee: $100.00	Subtotal: $1,000.00
 	Report name: Fake Report 2	Employee Count: 1	Commission per employee: $300.00	Subtotal: $300.00
 Recurring cost: $1,300.00
 Total cost: $13,000.00
-
-*NOT FINALISED*
-Order details (id #0)
-Date: 2020-05-14
-Reports:
-	Report name: Fake Product	Employee Count: 10	Commission per employee: $100.00	Subtotal: $1,000.00
-	Report name: Fake Report 2	Employee Count: 1	Commission per employee: $300.00	Subtotal: $300.00
-Critical Loading: $130.00
-Total cost: $1,430.00
-
-*NOT FINALISED*
-Order details (id #0)
-Date: 2020-05-14
-Reports:
-	Report name: Fake Product	Employee Count: 30	Commission per employee: $100.00	Subtotal: $3,000.00
-	Report name: Fake Report 2	Employee Count: 1	Commission per employee: $300.00	Subtotal: $300.00
-Critical Loading: $330.00
-Total cost: $3,630.00
-
-*NOT FINALISED*
-Order details (id #0)
-Date: 2020-05-14
-Reports:
-	Report name: Fake Product	Employee Count: 10	Commission per employee: $100.00	Subtotal: $1,000.00
-	Report name: Fake Report 2	Employee Count: 1	Commission per employee: $300.00	Subtotal: $300.00
-Total cost: $1,300.00
 
 </pre>
 </span>
@@ -268,7 +268,7 @@ Total cost: $1,300.00
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 5.2.1</a> at 14/05/2020, 8:29:14 PM</p>
+<a href="http://www.gradle.org">Gradle 5.2.1</a> at 15/05/2020, 12:25:50 AM</p>
 </div>
 </div>
 </body>

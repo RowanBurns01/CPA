@@ -2,15 +2,18 @@ package au.edu.sydney.cpa.erp.feaa.reports;
 
 import au.edu.sydney.cpa.erp.ordering.Report;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class ReportImpl implements Report {
 
-    private String name;
-    private double commissionPerEmployee;
-    private double[] legalData;
-    private double[] cashFlowData;
-    private double[] mergesData;
-    private double[] tallyingData;
-    private double[] deductionsData;
+    private final String name;
+    private final double commissionPerEmployee;
+    private final double[] legalData;
+    private final double[] cashFlowData;
+    private final double[] mergesData;
+    private final double[] tallyingData;
+    private final double[] deductionsData;
 
     public ReportImpl(String name,
                       double commissionPerEmployee,
@@ -64,8 +67,24 @@ public class ReportImpl implements Report {
     }
 
     @Override
-    public String toString() {
+    public String toString() { return String.format("%s", name); }
 
-        return String.format("%s", name);
+    @Override
+    public boolean equals(Object o){
+        if(!(o instanceof ReportImpl)){
+            return false;
+        }
+        return  Arrays.equals(((ReportImpl) o).cashFlowData, this.cashFlowData) &&
+                Arrays.equals(((ReportImpl) o).deductionsData, this.deductionsData) &&
+                Arrays.equals(((ReportImpl) o).legalData, this.legalData) &&
+                Arrays.equals(((ReportImpl) o).tallyingData, this.tallyingData) &&
+                Arrays.equals(((ReportImpl) o).mergesData, this.mergesData) &&
+                (((ReportImpl) o).commissionPerEmployee == this.commissionPerEmployee) &&
+                (((ReportImpl) o).name.equals(this.name));
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cashFlowData, commissionPerEmployee, deductionsData, legalData, tallyingData, mergesData, name);
     }
 }

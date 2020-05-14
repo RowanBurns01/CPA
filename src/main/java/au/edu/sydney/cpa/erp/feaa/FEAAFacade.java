@@ -3,6 +3,7 @@ package au.edu.sydney.cpa.erp.feaa;
 import au.edu.sydney.cpa.erp.auth.AuthModule;
 import au.edu.sydney.cpa.erp.auth.AuthToken;
 import au.edu.sydney.cpa.erp.database.TestDatabase;
+import au.edu.sydney.cpa.erp.feaa.handlers.*;
 import au.edu.sydney.cpa.erp.ordering.Client;
 import au.edu.sydney.cpa.erp.ordering.Order;
 import au.edu.sydney.cpa.erp.ordering.Report;
@@ -59,36 +60,28 @@ public class FEAAFacade {
         if (isScheduled) {
             if (1 == orderType) { // 1 is regular accounting
                 if (isCritical) {
-//                    order = new FirstOrderTypeScheduled(id, clientID, date, criticalLoading, maxCountedEmployees, numQuarters);
                     order = new ConcreteOrder(new TimingScheduled(), new ImportanceCritical(), new TypeRegular(), id, clientID, date, criticalLoading, numQuarters, maxCountedEmployees);
                 } else {
-//                    order = new Order66Scheduled(id, clientID, date, maxCountedEmployees, numQuarters);
                     order = new ConcreteOrder(new TimingScheduled(), new ImportanceNormal(), new TypeRegular(), id, clientID, date, -1, numQuarters, maxCountedEmployees);
                 }
             } else if (2 == orderType) { // 2 is audit
                     if (isCritical) {
-//                        order = new CriticalAuditOrderScheduled(id, clientID, date, criticalLoading, numQuarters);
                         order = new ConcreteOrder(new TimingScheduled(), new ImportanceCritical(), new TypeAudit(), id, clientID, date, criticalLoading, numQuarters, -1);
                     } else {
-//                        order = new NewOrderImplScheduled(id, clientID, date, numQuarters);
                         order = new ConcreteOrder(new TimingScheduled(), new ImportanceNormal(), new TypeAudit(), id, clientID, date, -1, numQuarters, -1);
                     }
             } else {return null;}
         } else {
             if (1 == orderType) {
                 if (isCritical) {
-//                    order = new FirstOrderType(id, clientID, date, criticalLoading, maxCountedEmployees);
                     order = new ConcreteOrder(new TimingOnce(), new ImportanceCritical(), new TypeRegular(), id, clientID, date, criticalLoading, -1, maxCountedEmployees);
                 } else {
-//                    order = new Order66(id, clientID, date, maxCountedEmployees);
                     order = new ConcreteOrder(new TimingOnce(), new ImportanceNormal(), new TypeRegular(), id, clientID, date, -1, -1, maxCountedEmployees);
                 }
             } else if (2 == orderType) {
                 if (isCritical) {
-//                    order = new CriticalAuditOrder(id, clientID, date, criticalLoading);
                     order = new ConcreteOrder(new TimingOnce(), new ImportanceCritical(), new TypeAudit(), id, clientID, date, criticalLoading, -1, -1);
                 } else {
-//                    order = new NewOrderImpl(id, clientID, date);
                     order = new ConcreteOrder(new TimingOnce(), new ImportanceNormal(), new TypeAudit(), id, clientID, date, -1, -1, -1);
                 }
             } else {return null;}
@@ -145,28 +138,52 @@ public class FEAAFacade {
             throw new SecurityException();
         }
 
-        List<ContactMethod> contactPriorityAsMethods = new ArrayList<>();
+        ContactChain chain = null;
 
         if (null != contactPriority) {
             for (String method: contactPriority) {
                 switch (method.toLowerCase()) {
                     case "internal accounting":
-                        contactPriorityAsMethods.add(ContactMethod.INTERNAL_ACCOUNTING);
+                        if(chain == null){
+                            chain = new InternalAccountingHandler(null);
+                        } else {
+                            chain.setNext(new InternalAccountingHandler(null));
+                        }
                         break;
                     case "email":
-                        contactPriorityAsMethods.add(ContactMethod.EMAIL);
+                        if(chain == null){
+                            chain = new EmailHandler(null);
+                        } else {
+                            chain.setNext(new EmailHandler(null));
+                        }
                         break;
                     case "carrier pigeon":
-                        contactPriorityAsMethods.add(ContactMethod.CARRIER_PIGEON);
+                        if(chain == null){
+                            chain = new CarrierPigeonHandler(null);
+                        } else {
+                            chain.setNext(new CarrierPigeonHandler(null));
+                        }
                         break;
                     case "mail":
-                        contactPriorityAsMethods.add(ContactMethod.MAIL);
+                        if(chain == null){
+                            chain = new MailHandler(null);
+                        } else {
+                            chain.setNext(new MailHandler(null));
+                        }
                         break;
                     case "phone call":
-                        contactPriorityAsMethods.add(ContactMethod.PHONECALL);
+                        if(chain == null){
+                            chain = new PhoneCallHandler(null);
+                        } else {
+                            chain.setNext(new PhoneCallHandler(null));
+                        }
                         break;
                     case "sms":
-                        contactPriorityAsMethods.add(ContactMethod.SMS);
+                        if(chain == null){
+                            chain = new SMSHandler(null);
+                        } else {
+                            chain.setNext(new SMSHandler(null));
+                        }
                         break;
                     default:
                         break;
@@ -174,21 +191,17 @@ public class FEAAFacade {
             }
         }
 
-        if (contactPriorityAsMethods.size() == 0) { // needs setting to default
-            contactPriorityAsMethods = Arrays.asList(
-                    ContactMethod.INTERNAL_ACCOUNTING,
-                    ContactMethod.EMAIL,
-                    ContactMethod.CARRIER_PIGEON,
-                    ContactMethod.MAIL,
-                    ContactMethod.PHONECALL
-            );
+        // why doesn't this include sms?
+        if(chain == null){
+            chain = new InternalAccountingHandler( new EmailHandler(
+                    new CarrierPigeonHandler( new MailHandler( new PhoneCallHandler( null)))));
         }
 
         Order order = TestDatabase.getInstance().getOrder(token, orderID);
-
         order.finalise();
         TestDatabase.getInstance().saveOrder(token, order);
-        return ContactHandler.sendInvoice(token, getClient(order.getClient()), contactPriorityAsMethods, order.generateInvoiceData());
+
+        return chain.sendInvoice(token, getClient(order.getClient()), order.generateInvoiceData());
     }
 
     public void logout() {
@@ -258,6 +271,13 @@ public class FEAAFacade {
         if (null == token) {
             throw new SecurityException();
         }
-        return ContactHandler.getKnownMethods();
+        return Arrays.asList(
+                "Carrier Pigeon",
+                "Email",
+                "Mail",
+                "Internal Accounting",
+                "Phone call",
+                "SMS"
+        );
     }
 }

@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33f978d0-7b02-4a34-b95b-ab98ef110069" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/Importance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/ImportanceCritical.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/ImportanceNormal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/Timing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/TimingOnce.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/TimingScheduled.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/Type.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/TypeAudit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/TypeRegular.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/handlers/CarrierPigeonHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/handlers/ContactChain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/handlers/EmailHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/handlers/InternalAccountingHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/handlers/MailHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/handlers/PhoneCallHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/handlers/SMSHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -23,15 +20,23 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/database/TestDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/database/TestDatabase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ContactHandler$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ContactHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ContactMethod.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/FEAAFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/FEAAFacade.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/CriticalAuditOrder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/CriticalAuditOrderScheduled.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/FirstOrderType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/FirstOrderTypeScheduled.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/NewOrderImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/NewOrderImplScheduled.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/Order66.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/Order66Scheduled.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/ConcreteOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/ConcreteOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/parts/ConcreteOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/parts/Importance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/parts/ImportanceCritical.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/parts/ImportanceNormal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/parts/Timing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/parts/TimingOnce.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/parts/TimingScheduled.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/parts/Type.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/parts/TypeAudit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/ordering/parts/TypeRegular.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/reports/ReportImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/au/edu/sydney/cpa/erp/feaa/reports/ReportImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/au.edu.sydney.cpa.erp.feaa.AllowedScopeTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/au.edu.sydney.cpa.erp.feaa.AllowedScopeTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/au.edu.sydney.cpa.erp.feaa.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/au.edu.sydney.cpa.erp.feaa.html" afterDir="false" />
@@ -39,16 +44,11 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/database/TestDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/database/TestDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ContactHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ContactMethod.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/FEAAFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/FEAAFacade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/CriticalAuditOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/ConcreteOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/CriticalAuditOrderScheduled.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/FirstOrderType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/FirstOrderTypeScheduled.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/NewOrderImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/NewOrderImplScheduled.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/Order66.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/Order66Scheduled.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/ConcreteOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/ordering/ConcreteOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/reports/ReportImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/au/edu/sydney/cpa/erp/feaa/reports/ReportImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -166,7 +166,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1589413217948</updated>
-      <workItem from="1589413222761" duration="27297000" />
+      <workItem from="1589413222761" duration="37391000" />
     </task>
     <servers />
   </component>
