@@ -10,13 +10,12 @@ import au.edu.sydney.cpa.erp.feaa.ordering.*;
 import au.edu.sydney.cpa.erp.feaa.reports.ReportDatabase;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 @SuppressWarnings("Duplicates")
 public class FEAAFacade {
     private AuthToken token;
+    private Map<Integer,Client> clientMap = new HashMap<>();
 
     public boolean login(String userName, String password) {
         token = AuthModule.login(userName, password);
@@ -105,7 +104,15 @@ public class FEAAFacade {
             throw new SecurityException();
         }
 
-        return new ClientImpl(token, id);
+        Client client;
+        if(clientMap.get(id) != null){
+            client = clientMap.get(id);
+        } else {
+            client = new ClientImpl(token, id);
+            clientMap.put(id,client);
+        }
+
+        return client;
     }
 
     public boolean removeOrder(int id) {
