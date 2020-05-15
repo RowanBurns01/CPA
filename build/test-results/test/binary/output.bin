@@ -1,65 +1,101 @@
-*NOT FINALISED*
-Order details (id #0)
-Date: 2020-05-15
-	Reports:
-c	Report name: Fake Product	Employee Count: 30	Commission per employee: $100.00	Subtotal: $3,000.00
-a	Report name: Fake Report 2	Employee Count: 1	Commission per employee: $300.00	Subtotal: $300.00
-Critical Loading: $330.00
-Total cost: $3,630.00
-
-*NOT FINALISED*
-Order details (id #0)
-Date: 2020-05-15
-	Reports:
-c	Report name: Fake Product	Employee Count: 10	Commission per employee: $100.00	Subtotal: $1,000.00
-a	Report name: Fake Report 2	Employee Count: 1	Commission per employee: $300.00	Subtotal: $300.00
-Critical Loading: $130.00
-Total cost: $1,430.00
-
-*NOT FINALISED*
-Order details (id #0)
-Date: 2020-05-15
-Number of quarters: 10
-	Reports:
-c	Report name: Fake Product	Employee Count: 10	Commission per employee: $100.00	Subtotal: $1,000.00
-a	Report name: Fake Report 2	Employee Count: 1	Commission per employee: $300.00	Subtotal: $300.00
-Critical Loading: $1,300.00
-Recurring cost: $1,430.00
-Total cost: $14,300.00
-
-*NOT FINALISED*
-Order details (id #0)
-Date: 2020-05-15
-	Reports:
-c	Report name: Fake Product	Employee Count: 10	Commission per employee: $100.00	Subtotal: $1,000.00
-a	Report name: Fake Report 2	Employee Count: 1	Commission per employee: $300.00	Subtotal: $300.00
-Total cost: $1,300.00
-
-*NOT FINALISED*
-Order details (id #0)
-Date: 2020-05-15
-Number of quarters: 10
-	Reports:
-c	Report name: Fake Product	Employee Count: 10	Commission per employee: $100.00	Subtotal: $1,000.00
-a	Report name: Fake Report 2	Employee Count: 1	Commission per employee: $300.00	Subtotal: $300.00
-Recurring cost: $1,300.00
-Total cost: $13,000.00
-
-*NOT FINALISED*
-Order details (id #0)
-Date: 2020-05-15
-	Reports:
-c	Report name: Fake Product	Employee Count: 10	Commission per employee: $100.00	Subtotal: $1,000.00
-a	Report name: Fake Report 2	Employee Count: 1	Commission per employee: $300.00	Subtotal: $300.00
-Total cost: $1,300.00
-
-	*NOT FINALISED*
-	Order details (id #0)
-	Date: 2020-05-15
-	Number of quarters: 10
-		Reports:
-	c	Report name: Fake Product	Employee Count: 10	Commission per employee: $100.00	Subtotal: $1,000.00
-	a	Report name: Fake Report 2	Employee Count: 1	Commission per employee: $300.00	Subtotal: $300.00
-	Recurring cost: $1,300.00
-	Total cost: $13,000.00
-	
+legalData
+cashFlowData
+mergesData
+tallyingData
+deductionsData
+legalData
+cashFlowData
+mergesData
+tallyingData
+deductionsData
+legalData
+cashFlowData
+mergesData
+tallyingData
+deductionsData
+legalData
+cashFlowData
+mergesData
+tallyingData
+deductionsData
+legalData
+cashFlowData
+mergesData
+tallyingData
+deductionsData
+legalData
+cashFlowData
+mergesData
+tallyingData
+deductionsData
+legalData
+cashFlowData
+mergesData
+tallyingData
+deductionsData
+legalData
+cashFlowData
+mergesData
+tallyingData
+deductionsData
+legalData
+cashFlowData
+mergesData
+tallyingData
+deductionsData
+legalData
+cashFlowData
+mergesData
+tallyingData
+deductionsData
+legalData
+cashFlowData
+mergesData
+tallyingData
+deductionsData
+legalData
+cashFlowData
+mergesData
+tallyingData
+deductionsData
+legalData
+cashFlowData
+mergesData
+tallyingData
+deductionsData
+legalData
+cashFlowData
+mergesData
+tallyingData
+deductionsData
+legalData
+cashFlowData
+mergesData
+tallyingData
+deductionsData
+legalData
+cashFlowData
+mergesData
+tallyingData
+deductionsData
+legalData
+cashFlowData
+mergesData
+tallyingData
+deductionsData
+legalData
+cashFlowData
+mergesData
+tallyingData
+deductionsData
+legalData
+cashFlowData
+mergesData
+tallyingData
+deductionsData
+legalData
+cashFlowData
+mergesData
+tallyingData
+deductionsData
+RAM: 418MB

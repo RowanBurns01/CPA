@@ -3,7 +3,7 @@ package au.edu.sydney.cpa.erp.feaa.reports;
 import au.edu.sydney.cpa.erp.ordering.Report;
 
 import java.util.Arrays;
-import java.util.Objects;
+import java.util.List;
 
 public class ReportImpl implements Report {
 
@@ -14,6 +14,7 @@ public class ReportImpl implements Report {
     private final double[] mergesData;
     private final double[] tallyingData;
     private final double[] deductionsData;
+    private final int hashCode;
 
     public ReportImpl(String name,
                       double commissionPerEmployee,
@@ -22,13 +23,15 @@ public class ReportImpl implements Report {
                       double[] mergesData,
                       double[] tallyingData,
                       double[] deductionsData) {
+
         this.name = name;
         this.commissionPerEmployee = commissionPerEmployee;
-        this.legalData = legalData;
-        this.cashFlowData = cashFlowData;
-        this.mergesData = mergesData;
-        this.tallyingData = tallyingData;
-        this.deductionsData = deductionsData;
+        this.legalData = DoubleArrayFactory.getDoubleArray(legalData);
+        this.cashFlowData = DoubleArrayFactory.getDoubleArray(cashFlowData);
+        this.mergesData = DoubleArrayFactory.getDoubleArray(mergesData);
+        this.tallyingData = DoubleArrayFactory.getDoubleArray(tallyingData);
+        this.deductionsData = DoubleArrayFactory.getDoubleArray(deductionsData);
+        this.hashCode = calculateHash();
     }
 
     @Override
@@ -85,6 +88,21 @@ public class ReportImpl implements Report {
 
     @Override
     public int hashCode() {
-        return Objects.hash(cashFlowData, commissionPerEmployee, deductionsData, legalData, tallyingData, mergesData, name);
+        return this.hashCode;
+    }
+
+    // Calculate Hashcode once to save computation
+    public int calculateHash() {
+        int result = 11;
+        result = 37 * result + name.hashCode();
+        result = 37 * result + ((Double)commissionPerEmployee).hashCode();
+        List<double[]> types = Arrays.asList(cashFlowData,deductionsData,legalData,tallyingData,mergesData);
+        for(double[] t : types){
+            if(t == null){ continue; }
+            for (double v : t) {
+                result = 37 * result + ((Double) v).hashCode();
+            }
+        }
+        return result;
     }
 }

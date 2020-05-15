@@ -205,7 +205,6 @@ public class TimingScheduled implements Timing {
 
             );
         }
-        System.out.println(toReturn);
         return toReturn;
     }
 

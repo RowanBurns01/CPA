@@ -129,8 +129,11 @@ public class FEAAFacade {
         if (null == token) {
             throw new SecurityException();
         }
+//        List<Report> reports = AllReportsFactory.getAllReports(ReportDatabase.getTestReports());
+        List<Report> reports = new ArrayList<>(ReportDatabase.getTestReports());
 
-        return new ArrayList<>(ReportDatabase.getTestReports());
+        System.out.println("RAM: " + (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/(1024*1024) +"MB");
+        return reports;
     }
 
     public boolean finaliseOrder(int orderID, List<String> contactPriority) {
@@ -199,7 +202,7 @@ public class FEAAFacade {
 
         Order order = TestDatabase.getInstance().getOrder(token, orderID);
         order.finalise();
-        TestDatabase.getInstance().saveOrder(token, order);
+//        TestDatabase.getInstance().saveOrder(token, order);
 
         return chain.sendInvoice(token, getClient(order.getClient()), order.generateInvoiceData());
     }

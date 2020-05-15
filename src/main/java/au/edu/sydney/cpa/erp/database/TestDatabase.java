@@ -31,6 +31,7 @@ public class TestDatabase {
         return instance;
     }
 
+    // Adds a new order or updates a pre-existing order
     public void saveOrder(AuthToken token, Order order) {
         if (!AuthModule.authenticate(token)) {
             throw new SecurityException("Invalid authorisation");
@@ -43,8 +44,8 @@ public class TestDatabase {
             }
         }
 
-        // Set back to 10
-        simulateSlowDatabase(3, "Saving order");
+
+        simulateSlowDatabase(5, "Saving order");
 
         orders.add(order.copy());
     }

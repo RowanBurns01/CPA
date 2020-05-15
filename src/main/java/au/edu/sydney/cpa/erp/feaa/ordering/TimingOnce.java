@@ -185,7 +185,6 @@ public class TimingOnce implements Timing {
                     loadedCommission
             );
         }
-        System.out.println(toReturn);
         return toReturn;
     }
 
