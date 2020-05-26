@@ -79,7 +79,7 @@ public class ReportDatabase {
         The database doesn't though...
          */
 
-        double[] result = new double[500000];
+        double[] result = new double[5000];
         Random random = new Random();
 
         for (int i = 0; i < result.length; i++) {

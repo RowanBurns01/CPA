@@ -4,18 +4,15 @@ import au.edu.sydney.cpa.erp.auth.AuthToken;
 import au.edu.sydney.cpa.erp.database.TestDatabase;
 import au.edu.sydney.cpa.erp.ordering.Client;
 
+/**
+ * A Client and their details. A Client may make orders.
+ */
 public class ClientImpl implements Client {
 
     private final int id;
-    private String fName = null, lName = null, phoneNumber = null, emailAddress = null, address = null, suburb = null,
-            state = null, postCode = null, internalAccounting = null, businessName = null, pigeonCoopID = null;
-    private Boolean fNameRetrieved = false, lNameRetrieved = false, phoneNumberRetrieved = false, emailAddressRetrieved = false,
-            addressRetrieved = false, suburbRetrieved = false, stateRetrieved = false, postCodeRetrieved = false,
-            internalAccountingRetrieved = false, businessNameRetrieved = false, pigeonCoopIDRetrieved = false;
     private AuthToken token;
 
     public ClientImpl(AuthToken token, int id) {
-
         this.id = id;
         this.token = token;
     }
@@ -24,92 +21,104 @@ public class ClientImpl implements Client {
         return id;
     }
 
+    /**
+     * Simple accessor that retrieves the client's first name from database using a data base call.
+     * @return The client's first name.
+     */
     @Override
     public String getFName() {
-        if(fName == null || !fNameRetrieved)
-            fName = TestDatabase.getInstance().getClientField(token, id, "fName");
-        fNameRetrieved = true;
-        return fName;
+        return TestDatabase.getInstance().getClientField(token, id, "fName");
     }
 
+    /**
+     * Simple accessor that retrieves last name from database using a data base call.
+     * @return The client's last name.
+     */
     @Override
     public String getLName() {
-        if(lName == null || !lNameRetrieved)
-            lName = TestDatabase.getInstance().getClientField(token, id, "lName");
-        lNameRetrieved = true;
-        return lName;
+       return TestDatabase.getInstance().getClientField(token, id, "lName");
     }
 
+    /**
+     * Simple accessor that retrieves the client's phone number from database using a data base call.
+     * @return The client's phone number.
+     */
     @Override
     public String getPhoneNumber() {
-        if(phoneNumber == null || !phoneNumberRetrieved)
-            phoneNumber = TestDatabase.getInstance().getClientField(token, id, "phoneNumber");
-        phoneNumberRetrieved = true;
-        return phoneNumber;
+        return TestDatabase.getInstance().getClientField(token, id, "phoneNumber");
     }
 
+    /**
+     * Simple accessor that retrieves the client's email address from database using a data base call.
+     * @return The client's email address.
+     */
     @Override
     public String getEmailAddress() {
-        if(emailAddress == null || !emailAddressRetrieved)
-            emailAddress = TestDatabase.getInstance().getClientField(token, id, "emailAddress");
-        emailAddressRetrieved = true;
-        return emailAddress;
+        return TestDatabase.getInstance().getClientField(token, id, "emailAddress");
     }
 
+    /**
+     * Simple accessor that retrieves the client's address from database using a data base call.
+     * @return The client's address .
+     */
     @Override
     public String getAddress() {
-        if(address == null || !addressRetrieved)
-            address = TestDatabase.getInstance().getClientField(token, id, "address");
-        addressRetrieved = true;
-        return address;
+        return TestDatabase.getInstance().getClientField(token, id, "address");
     }
 
+    /**
+     * Simple accessor that retrieves the client's suburb from database using a data base call.
+     * @return The client's suburb.
+     */
     @Override
     public String getSuburb() {
-        if(suburb == null || !suburbRetrieved)
-            suburb = TestDatabase.getInstance().getClientField(token, id, "suburb");
-        suburbRetrieved = true;
-        return suburb;
+        return TestDatabase.getInstance().getClientField(token, id, "suburb");
     }
 
+    /**
+     * Simple accessor that retrieves the client's state from database using a data base call.
+     * @return The client's state.
+     */
     @Override
     public String getState() {
-        if(state == null || !stateRetrieved)
-            state = TestDatabase.getInstance().getClientField(token, id, "state");
-        stateRetrieved = true;
-        return state;
+        return  TestDatabase.getInstance().getClientField(token, id, "state");
     }
 
+    /**
+     * Simple accessor that retrieves the client's postcode from database using a data base call.
+     * @return The client's postcode .
+     */
     @Override
     public String getPostCode() {
-        if(postCode == null || !postCodeRetrieved)
-            postCode = TestDatabase.getInstance().getClientField(token, id, "postCode");
-        postCodeRetrieved = true;
-        return postCode;
+        return TestDatabase.getInstance().getClientField(token, id, "postCode");
     }
 
+    /**
+     * Simple accessor that retrieves the client's internal accounting from database using a data base call.
+     * @return The client's internal accounting.
+     */
     @Override
     public String getInternalAccounting() {
-        if(internalAccounting == null || !internalAccountingRetrieved)
-            internalAccounting = TestDatabase.getInstance().getClientField(token, id, "internal accounting");
-        internalAccountingRetrieved = true;
-        return internalAccounting;
+        return TestDatabase.getInstance().getClientField(token, id, "internal accounting");
     }
 
+    /**
+     * Simple accessor that retrieves the client's business name from database using a data base call.
+     * @return The client's business name.
+     */
     @Override
     public String getBusinessName() {
-        if(businessName == null || !businessNameRetrieved)
-            businessName = TestDatabase.getInstance().getClientField(token, id, "businessName");
-        businessNameRetrieved = true;
-        return businessName;
+        return TestDatabase.getInstance().getClientField(token, id, "businessName");
     }
 
+    /**
+     * Simple accessor that retrieves the client's pigeon coop id from database using a data base call.
+     * Y'know, for storing the carrier pigeons.
+     * @return The client's pigeon coop id.
+     */
     @Override
     public String getPigeonCoopID() {
-        if(pigeonCoopID == null || !pigeonCoopIDRetrieved)
-            pigeonCoopID = TestDatabase.getInstance().getClientField(token, id, "pigeonCoopID");
-        pigeonCoopIDRetrieved = true;
-        return pigeonCoopID;
+        return TestDatabase.getInstance().getClientField(token, id, "pigeonCoopID");
     }
 }
 

@@ -8,6 +8,10 @@ public class MailHandler implements ContactChain {
 
     private ContactChain next;
 
+    /**
+     * MailHandler handles the sendInvoice request using mode of Mail.
+     * @param next the next ContactChain handler, may be null.
+     */
     public MailHandler(ContactChain next){
         this.next = next;
     }

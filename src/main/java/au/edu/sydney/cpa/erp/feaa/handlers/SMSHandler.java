@@ -8,6 +8,10 @@ public class SMSHandler implements ContactChain {
 
     private ContactChain next;
 
+    /**
+     * SMSHandler handles the sendInvoice request using mode of SMS.
+     * @param next the next ContactChain handler, may be null.
+     */
     public SMSHandler(ContactChain next){
         this.next = next;
     }

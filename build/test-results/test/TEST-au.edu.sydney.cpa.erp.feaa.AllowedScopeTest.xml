@@ -1,129 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" tests="22" skipped="0" failures="0" errors="0" timestamp="2020-05-15T11:53:27" hostname="DESKTOP-FLQN2VT" time="117.365">
+<testsuite name="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" tests="22" skipped="0" failures="0" errors="0" timestamp="2020-05-26T05:33:44" hostname="DESKTOP-FLQN2VT" time="5.42">
   <properties/>
-  <testcase name="testOrderCriticalAudit" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="3.548"/>
-  <testcase name="testOrderCriticalAuditSched" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.047"/>
-  <testcase name="testOrderCriticalRegularSched" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.048"/>
-  <testcase name="testOrderStandardAuditSched" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.05"/>
-  <testcase name="testOrderStandardRegular" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.023"/>
-  <testcase name="getKnownContactMethods" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.014"/>
-  <testcase name="testOrderStandardAudit" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.018"/>
-  <testcase name="testOrderCriticalRegular" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.016"/>
-  <testcase name="testOrderStandardRegularSched" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.017"/>
-  <testcase name="createOrder" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.008"/>
-  <testcase name="login" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.008"/>
-  <testcase name="getAllOrders" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.049"/>
-  <testcase name="removeOrder" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.017"/>
-  <testcase name="logout" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.016"/>
-  <testcase name="finaliseOrder" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.115"/>
-  <testcase name="getOrderLongDesc" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.011"/>
-  <testcase name="getOrderTotalCost" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.007"/>
-  <testcase name="orderLineSet" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.011"/>
-  <testcase name="epicRowanTest" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="113.297"/>
-  <testcase name="getOrderShortDesc" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.007"/>
-  <testcase name="getClient" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.011"/>
-  <testcase name="getAllClientIDs" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.006"/>
-  <system-out><![CDATA[legalData
-cashFlowData
-mergesData
-tallyingData
-deductionsData
-legalData
-cashFlowData
-mergesData
-tallyingData
-deductionsData
-legalData
-cashFlowData
-mergesData
-tallyingData
-deductionsData
-legalData
-cashFlowData
-mergesData
-tallyingData
-deductionsData
-legalData
-cashFlowData
-mergesData
-tallyingData
-deductionsData
-legalData
-cashFlowData
-mergesData
-tallyingData
-deductionsData
-legalData
-cashFlowData
-mergesData
-tallyingData
-deductionsData
-legalData
-cashFlowData
-mergesData
-tallyingData
-deductionsData
-legalData
-cashFlowData
-mergesData
-tallyingData
-deductionsData
-legalData
-cashFlowData
-mergesData
-tallyingData
-deductionsData
-legalData
-cashFlowData
-mergesData
-tallyingData
-deductionsData
-legalData
-cashFlowData
-mergesData
-tallyingData
-deductionsData
-legalData
-cashFlowData
-mergesData
-tallyingData
-deductionsData
-legalData
-cashFlowData
-mergesData
-tallyingData
-deductionsData
-legalData
-cashFlowData
-mergesData
-tallyingData
-deductionsData
-legalData
-cashFlowData
-mergesData
-tallyingData
-deductionsData
-legalData
-cashFlowData
-mergesData
-tallyingData
-deductionsData
-legalData
-cashFlowData
-mergesData
-tallyingData
-deductionsData
-legalData
-cashFlowData
-mergesData
-tallyingData
-deductionsData
-legalData
-cashFlowData
-mergesData
-tallyingData
-deductionsData
-RAM: 418MB
+  <testcase name="testOrderCriticalAuditSched" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="2.982"/>
+  <testcase name="testOrderCriticalRegularSched" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.045"/>
+  <testcase name="testOrderStandardRegularSched" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.052"/>
+  <testcase name="testOrderCriticalRegular" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.051"/>
+  <testcase name="testOrderStandardAuditSched" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.088"/>
+  <testcase name="testOrderCriticalAudit" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.042"/>
+  <testcase name="testOrderStandardAudit" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.045"/>
+  <testcase name="testOrderStandardRegular" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.057"/>
+  <testcase name="getKnownContactMethods" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.022"/>
+  <testcase name="getOrderShortDesc" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.072"/>
+  <testcase name="getClient" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.023"/>
+  <testcase name="removeOrder" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.021"/>
+  <testcase name="login" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.009"/>
+  <testcase name="getAllClientIDs" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.009"/>
+  <testcase name="getAllOrders" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.028"/>
+  <testcase name="createOrder" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.019"/>
+  <testcase name="getAllReports" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="1.671"/>
+  <testcase name="logout" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.024"/>
+  <testcase name="getOrderLongDesc" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.006"/>
+  <testcase name="orderLineSet" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.025"/>
+  <testcase name="finaliseOrder" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.061"/>
+  <testcase name="getOrderTotalCost" classname="au.edu.sydney.cpa.erp.feaa.AllowedScopeTest" time="0.011"/>
+  <system-out><![CDATA[RAM: 74MB
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

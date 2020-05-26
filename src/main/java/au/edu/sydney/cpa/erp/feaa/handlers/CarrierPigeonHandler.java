@@ -8,6 +8,10 @@ public class CarrierPigeonHandler implements ContactChain {
 
     private ContactChain next;
 
+    /**
+     * CarrierPigeonHandler handles the sendInvoice request using mode of CarrierPigeon.
+     * @param next the next ContactChain handler, may be null.
+     */
     public CarrierPigeonHandler(ContactChain next){
         this.next = next;
     }

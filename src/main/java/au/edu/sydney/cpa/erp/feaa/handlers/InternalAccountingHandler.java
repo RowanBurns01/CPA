@@ -8,6 +8,10 @@ public class InternalAccountingHandler implements ContactChain {
 
     private ContactChain next;
 
+    /**
+     * InternalAccountingHandler handles the sendInvoice request using mode of InternalAccounting.
+     * @param next the next ContactChain handler, may be null.
+     */
     public InternalAccountingHandler(ContactChain next){
         this.next = next;
     }

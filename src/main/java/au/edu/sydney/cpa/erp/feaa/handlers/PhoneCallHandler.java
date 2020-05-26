@@ -8,6 +8,10 @@ public class PhoneCallHandler implements ContactChain {
 
     private ContactChain next;
 
+    /**
+     * PhoneCallHandler handles the sendInvoice request using mode of PhoneCall.
+     * @param next the next ContactChain handler, may be null.
+     */
     public PhoneCallHandler(ContactChain next){
         this.next = next;
     }

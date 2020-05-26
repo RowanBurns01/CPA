@@ -5,6 +5,10 @@ import au.edu.sydney.cpa.erp.ordering.Report;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * ReportImpl implemented as a value object. ReportImplFlyweightFactory filters new ReportImpl to make sure reports
+ * with the same intrinsic state are shared.
+ */
 public class ReportImpl implements Report {
 
     private final String name;
@@ -24,50 +28,79 @@ public class ReportImpl implements Report {
                       double[] tallyingData,
                       double[] deductionsData) {
 
-        this.name = name;
+        this.name = ReportImplFlyweightFactory.getString(name); // beneficial because 1700 cases of duplicate names
         this.commissionPerEmployee = commissionPerEmployee;
-        this.legalData = DoubleArrayFactory.getDoubleArray(legalData);
-        this.cashFlowData = DoubleArrayFactory.getDoubleArray(cashFlowData);
-        this.mergesData = DoubleArrayFactory.getDoubleArray(mergesData);
-        this.tallyingData = DoubleArrayFactory.getDoubleArray(tallyingData);
-        this.deductionsData = DoubleArrayFactory.getDoubleArray(deductionsData);
+        this.legalData = ReportImplFlyweightFactory.getDoubleArray(legalData);
+        this.cashFlowData = ReportImplFlyweightFactory.getDoubleArray(cashFlowData);
+        this.mergesData = ReportImplFlyweightFactory.getDoubleArray(mergesData);
+        this.tallyingData = ReportImplFlyweightFactory.getDoubleArray(tallyingData);
+        this.deductionsData = ReportImplFlyweightFactory.getDoubleArray(deductionsData);
         this.hashCode = calculateHash();
     }
 
+    /**
+     * Simple accessor for the report name. May not be null.
+     * @return The report name.
+     */
     @Override
     public String getReportName() {
         return name;
     }
 
+    /**
+     * Simple accessor for the commission per employee. May not be null.
+     * @return The commission.
+     */
     @Override
     public double getCommission() {
         return commissionPerEmployee;
     }
 
+    /**
+     * Simple accessor for the legal data. May not be null.
+     * @return The legal data.
+     */
     @Override
     public double[] getLegalData() {
         return legalData;
     }
 
+    /**
+     * Simple accessor for the cash flow data. May not be null.
+     * @return The cash flow data.
+     */
     @Override
     public double[] getCashFlowData() {
         return cashFlowData;
     }
 
+    /**
+     * Simple accessor for the merges data. May not be null.
+     * @return The merges data.
+     */
     @Override
     public double[] getMergesData() {
         return mergesData;
     }
 
+    /**
+     * Simple accessor for the tallying data. May not be null.
+     * @return The tallying data.
+     */
     @Override
     public double[] getTallyingData() {
         return tallyingData;
     }
 
+    /**
+     * Simple accessor for the deductions data. May not be null.
+     * @return The deductions data.
+     */
     @Override
     public double[] getDeductionsData() {
         return deductionsData;
     }
+
 
     @Override
     public String toString() { return String.format("%s", name); }
@@ -91,8 +124,11 @@ public class ReportImpl implements Report {
         return this.hashCode;
     }
 
-    // Calculate Hashcode once to save computation
-    public int calculateHash() {
+    /**
+     * Calculate Hashcode once to save computation
+     * @return the calculated hash. May be negative.
+     */
+    private int calculateHash() {
         int result = 11;
         result = 37 * result + name.hashCode();
         result = 37 * result + ((Double)commissionPerEmployee).hashCode();

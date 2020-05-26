@@ -45,7 +45,7 @@ public class TestDatabase {
         }
 
 
-        simulateSlowDatabase(5, "Saving order");
+        simulateSlowDatabase(10, "Saving order");
 
         orders.add(order.copy());
     }
