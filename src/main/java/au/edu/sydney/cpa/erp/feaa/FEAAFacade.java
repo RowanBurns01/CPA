@@ -286,7 +286,7 @@ public class FEAAFacade {
 
         pool.execute(() -> transaction.commit(token));
         try {
-            Thread.sleep(20);
+            Thread.sleep(100);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

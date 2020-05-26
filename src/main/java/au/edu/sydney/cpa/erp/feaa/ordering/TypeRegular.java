@@ -35,8 +35,6 @@ public class TypeRegular implements Type {
     public StringBuilder addCappedForDesc(StringBuilder reportSB, Integer i) {
         if (i > maxCountedEmployees) {
             reportSB.append(" *CAPPED*\n");
-        } else {
-//            reportSB.append("\n");
         }
         return reportSB;
     }

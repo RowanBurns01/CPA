@@ -7,7 +7,7 @@ public class AuthModule {
     public static List<AuthToken> tokens = new ArrayList<>();
 
     public static AuthToken login(String userName, String password) {
-        if ("Ro".equals(userName) && "Ro".equals(password)) {
+        if ("Terry Gilliam".equals(userName) && "hunter2".equals(password)) {
             AuthToken token = new AuthToken();
             tokens.add(token);
             return token;
